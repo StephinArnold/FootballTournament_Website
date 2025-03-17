@@ -51,6 +51,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 20px;
         }
 
         .nav-links {
@@ -108,7 +109,6 @@
 
         td {
             padding: 12px;
-            /* border-bottom: 1px solid #ddd; */
         }
 
         tr:nth-child(even) {
@@ -172,6 +172,29 @@
             text-align: center;
             margin-top: 40px;
         }
+
+        /* Add responsive table scrolling */
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        @media (max-width: 768px) {
+            
+            table {
+                min-width: 600px; /* Ensure table has a minimum width for scrolling */
+            }
+            .stats-container{
+                flex-direction: column;
+            }
+            .stats-card{
+                width: 100%;
+                margin-top: 10px;
+            }
+            main{
+                padding: 15px;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -186,11 +209,7 @@
                     </div>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                    <!-- <li><a href="table.html"><i class="fas fa-trophy"></i> Points Table</a></li>
-                    <li><a href="topscorer.html"><i class="fas fa-futbol"></i> Top Scorers</a></li>
-                    <li><a href="cleansheet.html"><i class="fas fa-shield-alt"></i> Clean Sheets</a></li>
-                    <li><a href="fixture.html"><i class="far fa-calendar-alt"></i> Fixtures</a></li> -->
+                    <li><a href="index.html"><i class="fas fa-home"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -203,20 +222,13 @@
                 <h1 class="font-bold mb-3 text-2xl text-[#1a313c]">Final</h1>
                 <div class="flex w-full bg-[#dfdfdf] rounded px-2 py-7 items-center justify-between border">
                     <div class="flex gap-2 items-center">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Liverpool
-
-                        </h1>
+                        <h1 class="font-medium text-[#1a313c]">Liverpool</h1>
                         <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
                     </div>
-                    <div class="font-bold text-xl">
-                        0-0
-                    </div>
+                    <div class="font-bold text-xl">0-0</div>
                     <div class="flex gap-2 items-center">
                         <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Barcelona
-                        </h1>
+                        <h1 class="font-medium text-[#1a313c]">Barcelona</h1>
                     </div>
                 </div>
             </div>
@@ -225,111 +237,72 @@
                 <h1 class="font-bold mb-3 text-2xl text-[#1a313c]">Semi Final</h1>
                 <div class="flex w-full bg-[#dfdfdf] rounded px-2 py-7 items-center justify-between border">
                     <div class="flex gap-2 items-center">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Liverpool
-                        </h1>
+                        <h1 class="font-medium text-[#1a313c]">Liverpool</h1>
                         <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
                     </div>
-                    <div class="font-bold text-xl">
-                        -
-                    </div>
+                    <div class="font-bold text-xl">-</div>
                     <div class="flex gap-2 items-center">
                         <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Barcelona
-                        </h1>
+                        <h1 class="font-medium text-[#1a313c]">Barcelona</h1>
                     </div>
                 </div>
-
                 <div class="flex w-full bg-[#dfdfdf] rounded px-2 py-7 items-center justify-between border mt-3">
                     <div class="flex gap-2 items-center">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Liverpool
-                        </h1>
+                        <h1 class="font-medium text-[#1a313c]">Liverpool</h1>
                         <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
                     </div>
-                    <div class="font-bold text-xl">
-                        -
-                    </div>
+                    <div class="font-bold text-xl">-</div>
                     <div class="flex gap-2 items-center">
                         <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Barcelona
-                        </h1>
+                        <h1 class="font-medium text-[#1a313c]">Barcelona</h1>
                     </div>
                 </div>
             </div>
-
 
             <div class="mt-5">
                 <h1 class="font-bold mb-3 text-2xl text-[#1a313c]">Quarter Final</h1>
                 <div class="flex w-full bg-[#dfdfdf] rounded px-2 py-7 items-center justify-between border">
                     <div class="flex gap-2 items-center">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Liverpool
-                        </h1>
+                        <h1 class="font-medium text-[#1a313c]">Liverpool</h1>
                         <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
                     </div>
-                    <div class="font-bold text-xl">
-                        -
-                    </div>
+                    <div class="font-bold text-xl">-</div>
                     <div class="flex gap-2 items-center">
                         <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Barcelona
-                        </h1>
-                    </div>
-                </div>
-
-                <div class="flex w-full bg-[#dfdfdf] rounded px-2 py-7 items-center justify-between border mt-3">
-                    <div class="flex gap-2 items-center">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Liverpool
-                        </h1>
-                        <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
-                    </div>
-                    <div class="font-bold text-xl">
-                        -
-                    </div>
-                    <div class="flex gap-2 items-center">
-                        <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Barcelona
-                        </h1>
+                        <h1 class="font-medium text-[#1a313c]">Barcelona</h1>
                     </div>
                 </div>
                 <div class="flex w-full bg-[#dfdfdf] rounded px-2 py-7 items-center justify-between border mt-3">
                     <div class="flex gap-2 items-center">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Liverpool
-                        </h1>
+                        <h1 class="font-medium text-[#1a313c]">Liverpool</h1>
                         <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
                     </div>
-                    <div class="font-bold text-xl">
-                        -
-                    </div>
+                    <div class="font-bold text-xl">-</div>
                     <div class="flex gap-2 items-center">
                         <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Barcelona
-                        </h1>
+                        <h1 class="font-medium text-[#1a313c]">Barcelona</h1>
                     </div>
                 </div>
                 <div class="flex w-full bg-[#dfdfdf] rounded px-2 py-7 items-center justify-between border mt-3">
                     <div class="flex gap-2 items-center">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Liverpool
-                        </h1>
+                        <h1 class="font-medium text-[#1a313c]">Liverpool</h1>
                         <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
                     </div>
-                    <div class="font-bold text-xl">
-                        -
-                    </div>
+                    <div class="font-bold text-xl">-</div>
                     <div class="flex gap-2 items-center">
                         <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
-                        <h1 class="font-medium text-[#1a313c]">
-                            Barcelona
-                        </h1>
+                        <h1 class="font-medium text-[#1a313c]">Barcelona</h1>
+                    </div>
+                </div>
+                <div class="flex w-full bg-[#dfdfdf] rounded px-2 py-7 items-center justify-between border mt-3">
+                    <div class="flex gap-2 items-center">
+                        <h1 class="font-medium text-[#1a313c]">Liverpool</h1>
+                        <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
+                    </div>
+                    <div class="font-bold text-xl">-</div>
+                    <div class="flex gap-2 items-center">
+                        <img class="size-8" src="https://img.uefa.com/imgml/TP/teams/logos/100x100/50037.png" alt="">
+                        <h1 class="font-medium text-[#1a313c]">Barcelona</h1>
                     </div>
                 </div>
             </div>
@@ -340,387 +313,371 @@
             <div>
                 <div class="mt-5 border border-gray-300 px-6 py-10 rounded-xl">
                     <h1 class="font-medium mb-3 text-xl text-[#1a313c]">Group A</h1>
-                    <table class="w-full text-left">
-                        <thead>
-                            <tr class="text-gray-500 text-sm">
-                                <th>Pos</th>
-                                <th>MP</th>
-                                <th>W</th>
-                                <th>D</th>
-                                <th>L</th>
-                                <th>GD</th>
-                                <th>Pts</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-gray-700 text-sm">
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bordeaux"
-                                        class="w-6 h-6">
-                                    Bordeaux
-                                </td>
-                                <td>6</td>
-                                <td>16</td>
-                                <td>16</td>
-                                <td>16</td>
-                                <td>16</td>
-                                <td>16</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bayern"
-                                        class="w-6 h-6">
-                                    Bayern München
-                                </td>
-                                <td>6</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Juventus"
-                                        class="w-6 h-6">
-                                    Juventus
-                                </td>
-                                <td>6</td>
-                                <td>8</td>
-                                <td>8</td>
-                                <td>8</td>
-                                <td>8</td>
-                                <td>8</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png"
-                                        alt="Maccabi Haifa" class="w-6 h-6">
-                                    Maccabi Haifa
-                                </td>
-                                <td>6</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png"
-                                        alt="Maccabi Haifa" class="w-6 h-6">
-                                    Maccabi Haifa
-                                </td>
-                                <td>6</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png"
-                                        alt="Maccabi Haifa" class="w-6 h-6">
-                                    Maccabi Haifa
-                                </td>
-                                <td>6</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="text-gray-500 text-sm">
+                                    <th>Pos</th>
+                                    <th>MP</th>
+                                    <th>W</th>
+                                    <th>D</th>
+                                    <th>L</th>
+                                    <th>GD</th>
+                                    <th>Pts</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700 text-sm">
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bordeaux" class="w-6 h-6">
+                                        Bordeaux
+                                    </td>
+                                    <td>6</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bayern" class="w-6 h-6">
+                                        Bayern München
+                                    </td>
+                                    <td>6</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Juventus" class="w-6 h-6">
+                                        Juventus
+                                    </td>
+                                    <td>6</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Maccabi Haifa" class="w-6 h-6">
+                                        Maccabi Haifa
+                                    </td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Maccabi Haifa" class="w-6 h-6">
+                                        Maccabi Haifa
+                                    </td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Maccabi Haifa" class="w-6 h-6">
+                                        Maccabi Haifa
+                                    </td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="mt-5 border border-gray-300 p-5 rounded-xl">
                     <h1 class="font-medium mb-3 text-xl text-[#1a313c]">Group B</h1>
-                    <table class="w-full text-left">
-                        <thead>
-                            <tr class="text-gray-500 text-sm">
-                                <th>Pos</th>
-                                <th>MP</th>
-                                <th>W</th>
-                                <th>D</th>
-                                <th>L</th>
-                                <th>GD</th>
-                                <th>Pts</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-gray-700 text-sm">
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bordeaux"
-                                        class="w-6 h-6">
-                                    Bordeaux
-                                </td>
-                                <td>6</td>
-                                <td>16</td>
-                                <td>16</td>
-                                <td>16</td>
-                                <td>16</td>
-                                <td>16</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bayern"
-                                        class="w-6 h-6">
-                                    Bayern München
-                                </td>
-                                <td>6</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Juventus"
-                                        class="w-6 h-6">
-                                    Juventus
-                                </td>
-                                <td>6</td>
-                                <td>8</td>
-                                <td>8</td>
-                                <td>8</td>
-                                <td>8</td>
-                                <td>8</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png"
-                                        alt="Maccabi Haifa" class="w-6 h-6">
-                                    Maccabi Haifa
-                                </td>
-                                <td>6</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png"
-                                        alt="Maccabi Haifa" class="w-6 h-6">
-                                    Maccabi Haifa
-                                </td>
-                                <td>6</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png"
-                                        alt="Maccabi Haifa" class="w-6 h-6">
-                                    Maccabi Haifa
-                                </td>
-                                <td>6</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="text-gray-500 text-sm">
+                                    <th>Pos</th>
+                                    <th>MP</th>
+                                    <th>W</th>
+                                    <th>D</th>
+                                    <th>L</th>
+                                    <th>GD</th>
+                                    <th>Pts</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700 text-sm">
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bordeaux" class="w-6 h-6">
+                                        Bordeaux
+                                    </td>
+                                    <td>6</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bayern" class="w-6 h-6">
+                                        Bayern München
+                                    </td>
+                                    <td>6</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Juventus" class="w-6 h-6">
+                                        Juventus
+                                    </td>
+                                    <td>6</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Maccabi Haifa" class="w-6 h-6">
+                                        Maccabi Haifa
+                                    </td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Maccabi Haifa" class="w-6 h-6">
+                                        Maccabi Haifa
+                                    </td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Maccabi Haifa" class="w-6 h-6">
+                                        Maccabi Haifa
+                                    </td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="mt-5 border border-gray-300 p-5 rounded-xl">
                     <h1 class="font-medium mb-3 text-xl text-[#1a313c]">Group C</h1>
-                    <table class="w-full text-left">
-                        <thead>
-                            <tr class="text-gray-500 text-sm">
-                                <th>Pos</th>
-                                <th>MP</th>
-                                <th>W</th>
-                                <th>D</th>
-                                <th>L</th>
-                                <th>GD</th>
-                                <th>Pts</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-gray-700 text-sm">
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bordeaux"
-                                        class="w-6 h-6">
-                                    Bordeaux
-                                </td>
-                                <td>6</td>
-                                <td>16</td>
-                                <td>16</td>
-                                <td>16</td>
-                                <td>16</td>
-                                <td>16</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bayern"
-                                        class="w-6 h-6">
-                                    Bayern München
-                                </td>
-                                <td>6</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Juventus"
-                                        class="w-6 h-6">
-                                    Juventus
-                                </td>
-                                <td>6</td>
-                                <td>8</td>
-                                <td>8</td>
-                                <td>8</td>
-                                <td>8</td>
-                                <td>8</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png"
-                                        alt="Maccabi Haifa" class="w-6 h-6">
-                                    Maccabi Haifa
-                                </td>
-                                <td>6</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png"
-                                        alt="Maccabi Haifa" class="w-6 h-6">
-                                    Maccabi Haifa
-                                </td>
-                                <td>6</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png"
-                                        alt="Maccabi Haifa" class="w-6 h-6">
-                                    Maccabi Haifa
-                                </td>
-                                <td>6</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="text-gray-500 text-sm">
+                                    <th>Pos</th>
+                                    <th>MP</th>
+                                    <th>W</th>
+                                    <th>D</th>
+                                    <th>L</th>
+                                    <th>GD</th>
+                                    <th>Pts</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700 text-sm">
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bordeaux" class="w-6 h-6">
+                                        Bordeaux
+                                    </td>
+                                    <td>6</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bayern" class="w-6 h-6">
+                                        Bayern München
+                                    </td>
+                                    <td>6</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Juventus" class="w-6 h-6">
+                                        Juventus
+                                    </td>
+                                    <td>6</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Maccabi Haifa" class="w-6 h-6">
+                                        Maccabi Haifa
+                                    </td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Maccabi Haifa" class="w-6 h-6">
+                                        Maccabi Haifa
+                                    </td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Maccabi Haifa" class="w-6 h-6">
+                                        Maccabi Haifa
+                                    </td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="mt-5 border border-gray-300 p-5 rounded-xl">
                     <h1 class="font-medium mb-3 text-xl text-[#1a313c]">Group D</h1>
-                    <table class="w-full text-left">
-                        <thead>
-                            <tr class="text-gray-500 text-sm">
-                                <th>Pos</th>
-                                <th>MP</th>
-                                <th>W</th>
-                                <th>D</th>
-                                <th>L</th>
-                                <th>GD</th>
-                                <th>Pts</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-gray-700 text-sm">
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bordeaux"
-                                        class="w-6 h-6">
-                                    Bordeaux
-                                </td>
-                                <td>6</td>
-                                <td>16</td>
-                                <td>16</td>
-                                <td>16</td>
-                                <td>16</td>
-                                <td>16</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bayern"
-                                        class="w-6 h-6">
-                                    Bayern München
-                                </td>
-                                <td>6</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>10</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Juventus"
-                                        class="w-6 h-6">
-                                    Juventus
-                                </td>
-                                <td>6</td>
-                                <td>8</td>
-                                <td>8</td>
-                                <td>8</td>
-                                <td>8</td>
-                                <td>8</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png"
-                                        alt="Maccabi Haifa" class="w-6 h-6">
-                                    Maccabi Haifa
-                                </td>
-                                <td>6</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr class="border-b">
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png"
-                                        alt="Maccabi Haifa" class="w-6 h-6">
-                                    Maccabi Haifa
-                                </td>
-                                <td>6</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td class="flex items-center gap-2 py-2">
-                                    <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png"
-                                        alt="Maccabi Haifa" class="w-6 h-6">
-                                    Maccabi Haifa
-                                </td>
-                                <td>6</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="text-gray-500 text-sm">
+                                    <th>Pos</th>
+                                    <th>MP</th>
+                                    <th>W</th>
+                                    <th>D</th>
+                                    <th>L</th>
+                                    <th>GD</th>
+                                    <th>Pts</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700 text-sm">
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bordeaux" class="w-6 h-6">
+                                        Bordeaux
+                                    </td>
+                                    <td>6</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Bayern" class="w-6 h-6">
+                                        Bayern München
+                                    </td>
+                                    <td>6</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Juventus" class="w-6 h-6">
+                                        Juventus
+                                    </td>
+                                    <td>6</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Maccabi Haifa" class="w-6 h-6">
+                                        Maccabi Haifa
+                                    </td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Maccabi Haifa" class="w-6 h-6">
+                                        Maccabi Haifa
+                                    </td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td class="flex items-center gap-2 py-2">
+                                        <img src="https://img.uefa.com/imgml/TP/teams/logos/64x64/59045.png" alt="Maccabi Haifa" class="w-6 h-6">
+                                        Maccabi Haifa
+                                    </td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="stats-container">
@@ -749,21 +706,19 @@
                             <span>Fewest Goals Conceded:</span>
                             <span>SPORTING FC (1)</span>
                         </div>
-                        <!-- <div class="stats-info">
-                    <span>Most Wins:</span>
-                    <span>SPORTING FC, FC REMONTADA (4)</span>
-                </div> -->
                         <div class="stats-info">
                             <span>Unbeaten:</span>
                             <span>SPORTING FC</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Football Tournament League. All Rights Reserved.</p>
+            <p>© 2025 Football Tournament League. All Rights Reserved.</p>
         </div>
     </footer>
 </body>
