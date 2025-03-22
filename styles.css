@@ -64,6 +64,9 @@ main {
     .group {
         width: 90%;
     }
+    .img{
+        width: 100%; /*image scale*/
+    }
 }
 
 /* Groups Section */
