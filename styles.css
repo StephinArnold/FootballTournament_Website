@@ -4,6 +4,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    font-size: 16px;
+}
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 header {
@@ -51,6 +56,9 @@ main {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
     nav ul {
         flex-direction: column;
         align-items: center;
